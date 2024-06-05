@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "lifemate-417104",
+  "private_key_id": "5532f4b96dd4ae676c88aea178b39206cdde215f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDuoE3PbBpZEMN9\nbtirEo0PiGayhrJDsKHNj5xfpa2FAPQl3zfPbiF9zTwCqb1EgjhI7i0SMkbnRexK\nV5RhGQVkdqASnPserrMY3TFIhmDWqZexa8XVCLXHuEYzj5cdpi7Jg6SSTX415xVc\neMTI8VJsjHXx97sJ7pgIxE/+erFzHIipd5DM8O6uzYL3TgcSxRqKbbu26y8xNMP1\nfn83d7N/xMXtEmRrC5XMfMspKtuca7+IU2R3iE1dYYtiv3u774pSYU+EgVL7PaWN\nHMvvG2uDbcTDJx42WCNo3hrgz9JhC41XNq+Mywrrf3OCV8Z7JUoyQoqmOhg+hgjz\nBPJpcRWVAgMBAAECggEAXhfT1sB3uzsC+sjkosBT4xYT+L1oOYzCoH3KWWTJATMZ\nEn3sUdzJVAPDcAFiYks+ynMwToaIstU9kSrrlUX6fFzSTcScuMKGWH2P21sxgDOr\nXwhyH8ipdTFSbS5nlgdbV5aTJCVuaO7P24C7h8iwiaDxORJILGhqhrpyGJRkuFB7\nGFIzSz4Ck9PFMfX9OTvOiftM0BBmHEV4ryMgJpth1LJ4t4vClIRnsig9y3Y5FHa2\no00xxjt3QEDqyZs8AVCtkben5CsBBdqTltO6fgY1jiFG+qEu8pE3k0nG7vUOcx+i\nlGEHaVnA7KQzs+nxA5GpJ9iDpmbtahIchn4WyO/Z2QKBgQD7ZSDUcN+dkmlZIBeg\n+O6y2D8mJ/9IHH9ZQPrCsVMAtzM9ebfJ5X4gd+U648iYe25PEw0vAWwvg42zc0xi\npm+UD8lHFU0uHJm3nVh0NXA5LjbYAtu9VQJ2toTA5Zhhxe69PnJo4LlgLbASkt8C\nZ6hnOxAq971Eu8KK2lMIGze9cwKBgQDy/0xqy9aIyUYEp6Z3s8q3wuK7uU8GHuqV\nrEEsOw7NDejz1daSCgK1M3c/376VhesAp6PLHMgnzLW3xi30mnTHYRz11P4VSdTA\n424vF4O73oxJaoYMTV8p2Tpcul6ioZcoxz3FCKl9MChp3qyRJHr/SGmOoO4T1TBv\nzjaCUXye1wKBgFO+9JjQoS2UwJN4JWbyhlH9x8umN1yGYcYR53dEKypp3R/1lEwl\nr0aRqkNb7k8djzm4VwP5rViGsoW9Ow0B9NmWCK8tYXCjBnIscHMF+kSSKKL9EMaZ\nsyBo3QCFe6XWkhlo3CQj+J0ZmzYUx0W90lPRUSl/LgXfpocrA84HgyIRAoGBAJVA\n1nEqbsVpy0YEq60Ok883NwjTE4TQ7ImuWgGO7NJqXtGWYMsmtu8Rg4eKKIeyz9uB\nHIwfS5mWlW8hnQyG6n+kWKNuhfoRdUpc50qpiNKWKVjWwys/QtpzgPN/zazaz/vO\nFVS2s1QfhlMw4JHt9FZk5eEjW9h2s9+Yq8ZzwrXVAoGAbytyhlk6x2KP+VyHp5bL\nqgwempVnWeXTT4XyizlOWq3dLLtHQ+eHMtW68lvUP3FSLEyfKbeulGyJ8xXfVa+R\nyBh+Ud8XGq7xmaasiLuxmpE1sjdaRH4KohJMZEDi3QAfFaZ/geYUMhDem0kY8kVP\n+mzLxu+ibTPqxUMrTLbkfd4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "lifemate2@lifemate-417104.iam.gserviceaccount.com",
+  "client_id": "109727559828872678762",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/lifemate2%40lifemate-417104.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

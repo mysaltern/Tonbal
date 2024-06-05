@@ -1,0 +1,22 @@
+{
+  "name": "tonbal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-polly": "^3.588.0",
+    "@google-cloud/speech": "^6.6.0",
+    "aws-sdk": "^2.1632.0",
+    "axios": "^1.7.2",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "openai": "^4.47.2",
+    "play-sound": "^1.1.6"
+  }
+}
