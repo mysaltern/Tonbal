@@ -1,6 +1,7 @@
 const { spawn } = require('child_process');
 const speech = require('@google-cloud/speech');
 const path = require('path');
+const { handleVoiceCommand } = require('./voiceCommands'); // Import the command handler
 
 // Import the TTS module
 
@@ -68,9 +69,13 @@ setInterval(() => {
   if (Date.now() - lastUpdateTime > 3000 && convertedText.trim()) {
     console.log('Converted text unchanged for 3 seconds. Calling TTS.');
 
-    
-   GPT.generateChatResponse(convertedText);
- 
+   // Handle the voice command
+   const commandHandled = handleVoiceCommand(convertedText);
+
+   // If no command was handled, call TTS
+   if (!commandHandled) {
+     GPT.generateChatResponse(convertedText);
+   }
     convertedText = ''; // Clear convertedText after calling TTS
   }
 }, 1000);

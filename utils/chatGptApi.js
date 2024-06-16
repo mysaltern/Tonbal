@@ -1,13 +1,12 @@
-// chatGptApi.js
 const axios = require('axios');
 const fs = require('fs');
+const path = require('path');
 const TTS = require('../modules/aws-voice.js'); // Adjust the path if necessary
-// const { conversationDefaults } = require('./chatDefaults.js');
 const { conversationDefaults } = require('./chatDefaults.js');
 
 // Replace 'YOUR_OPENAI_API_KEY' with your actual OpenAI API key
 const OPENAI_API_KEY = 'sk-proj-ZP5CvxCBETfm6Y0oFFCET3BlbkFJqsWqH287MQxD4GL76auy';
-let conversationHistory = []; 
+
 /**
  * Generates a chat response using the OpenAI GPT-3 API.
  * @param {string} userInput - User input for the chat.
@@ -15,48 +14,30 @@ let conversationHistory = [];
  */
 async function generateChatResponse(userInput) {
   try {
-   
-
-
-
+    // Load the conversation history from the file
+    const conversationHistory = loadConversationHistory();
 
     const updatedMessages = [
       ...conversationDefaults.initialMessages,
       { role: 'user', content: userInput },
-    ];
-
-    // Load the conversation history from the file
-    const conversationHistory = require('../conversation_history.json');
-
-    // Combine the initial messages with the loaded conversation history
-    let finalUpdatedMessages = [
-      ...updatedMessages,
       ...conversationHistory
     ];
 
-    // Append the user input to the conversation history
-    appendToConversationHistory(userInput, 'user', function() {
-      // Load the updated conversation history from the file again
-      // const updatedConversationHistory = require('../conversation_history.json');
-      
-      // Combine the initial messages with the newly loaded conversation history
-      finalUpdatedMessages = [
+    // Append the user input to the conversation history and then generate the chat response
+    appendToConversationHistory(userInput, 'user', () => {
+      // Reload the updated conversation history from the file
+      const updatedConversationHistory = loadConversationHistory();
+
+      const finalUpdatedMessages = [
         ...conversationDefaults.initialMessages,
-        { role: 'user', content:"#start " + userInput+" #end" },
-        ...conversationHistory
+        { role: 'user', content: "#start " + userInput + " #end" },
+        ...updatedConversationHistory
       ];
-    
-      // Update finalUpdatedMessages after the append operation completes
-      // const lastUserMessageIndex = finalUpdatedMessages.length - 1;
-      // if (finalUpdatedMessages[lastUserMessageIndex].role === 'user') {
-      //   finalUpdatedMessages[lastUserMessageIndex].content += ' #response_needed';
-      // }
-   console.log(finalUpdatedMessages);
+
       // Now, proceed with generating the chat response
-     generateChatResponseHelper(finalUpdatedMessages);
+      generateChatResponseHelper(finalUpdatedMessages);
     });
 
-    
   } catch (error) {
     console.error('Error generating chat response:', error.message);
     throw error;
@@ -95,13 +76,8 @@ async function generateChatResponseHelper(finalUpdatedMessages) {
 
 // Function to append new chat content to conversation history
 function appendToConversationHistory(newContent, role, callback) {
-  let conversationHistory = [];
-
   // Read existing conversation history if the file exists
-  if (fs.existsSync('conversation_history.json')) {
-    const data = fs.readFileSync('conversation_history.json');
-    conversationHistory = JSON.parse(data);
-  }
+  const conversationHistory = loadConversationHistory();
 
   // Append new content to conversation history
   conversationHistory.push({ role: role, content: newContent });
@@ -111,6 +87,16 @@ function appendToConversationHistory(newContent, role, callback) {
 
   // Call the callback to indicate that the operation is complete
   callback();
+}
+
+// Function to load the conversation history from the file
+function loadConversationHistory() {
+  const conversationHistoryPath = path.join(__dirname, '../conversation_history.json');
+  if (fs.existsSync(conversationHistoryPath)) {
+    const data = fs.readFileSync(conversationHistoryPath);
+    return JSON.parse(data);
+  }
+  return [];
 }
 
 module.exports = { generateChatResponse };
