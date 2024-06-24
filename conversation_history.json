@@ -5,38 +5,6 @@
   },
   {
     "role": "user",
-    "content": "what's that "
-  },
-  {
-    "role": "user",
-    "content": "save me a shuffle random number "
-  },
-  {
-    "role": "user",
-    "content": "what was that number "
-  },
-  {
-    "role": "user",
-    "content": "what's the time "
-  },
-  {
-    "role": "user",
-    "content": "what time is it in Tehran "
-  },
-  {
-    "role": "user",
-    "content": "I'm your mom "
-  },
-  {
-    "role": "user",
-    "content": "and what is my name "
-  },
-  {
-    "role": "user",
-    "content": "I am your mother "
-  },
-  {
-    "role": "user",
-    "content": "my name is Sahel "
+    "content": " hello "
   }
 ]

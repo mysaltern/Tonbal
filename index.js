@@ -1,3 +1,4 @@
+process.env.GOOGLE_APPLICATION_CREDENTIALS = "./lifemate-417104-5532f4b96dd4.json";
 const VoiceRecognition = require('./modules/speech');
 
 
