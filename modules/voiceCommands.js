@@ -8,6 +8,13 @@ const conversationHistoryPath = path.join(__dirname, '../conversation_history.js
 function clearConversationHistory() {
   fs.writeFileSync(conversationHistoryPath, JSON.stringify([]));
   console.log('Conversation history cleared.');
+  const VoiceRecognition = require('./speech'); // Import the VoiceRecognition class
+
+  // Create an instance of the VoiceRecognition class
+  const voiceRecognition = new VoiceRecognition();
+  
+  // Start recognition
+  voiceRecognition.startRecognition();
 }
 
 // Handle different voice commands

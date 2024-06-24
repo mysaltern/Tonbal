@@ -1,106 +1,42 @@
 [
   {
     "role": "user",
-    "content": " what is my name "
+    "content": "hello "
   },
   {
     "role": "user",
-    "content": " no it's your last name "
+    "content": "what's that "
   },
   {
     "role": "user",
-    "content": "hello how are you "
+    "content": "save me a shuffle random number "
   },
   {
     "role": "user",
-    "content": " I'm good what's your name "
+    "content": "what was that number "
   },
   {
     "role": "user",
-    "content": " my name is Muhammad "
+    "content": "what's the time "
   },
   {
     "role": "user",
-    "content": " where are you from "
+    "content": "what time is it in Tehran "
   },
   {
     "role": "user",
-    "content": " where is New Zealand "
+    "content": "I'm your mom "
   },
   {
     "role": "user",
-    "content": " um I didn't know that "
+    "content": "and what is my name "
   },
   {
     "role": "user",
-    "content": " who is your mom "
+    "content": "I am your mother "
   },
   {
     "role": "user",
-    "content": " all this shit "
-  },
-  {
-    "role": "user",
-    "content": " yeah I like them "
-  },
-  {
-    "role": "user",
-    "content": " I like programming "
-  },
-  {
-    "role": "user",
-    "content": " what choice do you have "
-  },
-  {
-    "role": "user",
-    "content": " toys "
-  },
-  {
-    "role": "user",
-    "content": " I don't have "
-  },
-  {
-    "role": "user",
-    "content": " yeah I knew that "
-  },
-  {
-    "role": "user",
-    "content": "clear  clear "
-  },
-  {
-    "role": "user",
-    "content": " my name is "
-  },
-  {
-    "role": "user",
-    "content": " hi my name is woman "
-  },
-  {
-    "role": "user",
-    "content": " how are you my name is woman "
-  },
-  {
-    "role": "user",
-    "content": " my name is "
-  },
-  {
-    "role": "user",
-    "content": " okay so how do you feel "
-  },
-  {
-    "role": "user",
-    "content": " you are so cool "
-  },
-  {
-    "role": "user",
-    "content": " so do you want to know more about me "
-  },
-  {
-    "role": "user",
-    "content": " we can "
-  },
-  {
-    "role": "user",
-    "content": " so "
+    "content": "my name is Sahel "
   }
 ]
