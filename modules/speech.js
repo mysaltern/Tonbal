@@ -2,7 +2,6 @@ const { spawn } = require('child_process');
 const speech = require('@google-cloud/speech');
 const { handleVoiceCommand } = require('./voiceCommands'); // Import the command handler
 const GPT = require('../utils/chatGptApi'); // Import the TTS module
-
 class VoiceRecognition {
   constructor() {
     this.client = new speech.SpeechClient();
@@ -34,6 +33,8 @@ class VoiceRecognition {
       .on('data', (data) => {
         if (data.results[0] && data.results[0].alternatives[0]) {
           const transcription = data.results[0].alternatives[0].transcript;
+          
+
           console.log(`Transcription: ${transcription}`);
           this.convertedText += transcription + ' ';
           this.lastUpdateTime = Date.now();

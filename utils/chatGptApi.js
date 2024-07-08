@@ -16,6 +16,7 @@ async function generateChatResponse(userInput) {
   try {
     // Load the conversation history from the file
     const conversationHistory = loadConversationHistory();
+    const loadLastBotMessageText = loadLastBotMessage(); // Correctly name the variable
 
     const updatedMessages = [
       ...conversationDefaults.initialMessages,
@@ -27,13 +28,15 @@ async function generateChatResponse(userInput) {
     appendToConversationHistory(userInput, 'user', () => {
       // Reload the updated conversation history from the file
       const updatedConversationHistory = loadConversationHistory();
-
+      const loadLastBotMessageText = loadLastBotMessage(); // Call the function here correctly
       const finalUpdatedMessages = [
         ...conversationDefaults.initialMessages,
         { role: 'user', content: "#start " + userInput + " #end" },
+        { role: 'assistant', content: "#start_last_bot_message " + loadLastBotMessageText[0]?.content + " #end_last_bot_message" }, // Access the message content correctly
         ...updatedConversationHistory
       ];
 
+      console.log(finalUpdatedMessages);
       // Now, proceed with generating the chat response
       generateChatResponseHelper(finalUpdatedMessages);
     });
@@ -63,6 +66,15 @@ async function generateChatResponseHelper(finalUpdatedMessages) {
     );
 
     const chatContent = response.data.choices[0].message.content;
+
+    const lastContent = [
+      {
+        "role": "assistant",
+        "content": chatContent
+      }
+    ];
+
+    fs.writeFileSync('last_message_bot.json', JSON.stringify(lastContent, null, 2));
     if (chatContent.trim()) {
       TTS(chatContent);
     }
@@ -94,6 +106,16 @@ function loadConversationHistory() {
   const conversationHistoryPath = path.join(__dirname, '../conversation_history.json');
   if (fs.existsSync(conversationHistoryPath)) {
     const data = fs.readFileSync(conversationHistoryPath);
+    return JSON.parse(data);
+  }
+  return [];
+}
+
+// Function to load the last bot message from the file
+function loadLastBotMessage() {
+  const LastMessageBotPath = path.join(__dirname, '../last_message_bot.json');
+  if (fs.existsSync(LastMessageBotPath)) {
+    const data = fs.readFileSync(LastMessageBotPath);
     return JSON.parse(data);
   }
   return [];
