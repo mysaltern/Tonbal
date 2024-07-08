@@ -23,6 +23,11 @@ function handleVoiceCommand(command) {
     case 'reset':
       clearConversationHistory();
       return true;
+    case 'stop':
+      const VoiceRecognition = require('./speech');
+      const voiceRecognition = new VoiceRecognition();
+      voiceRecognition.stopRecognition();
+      return true;
     // Add more cases for different commands as needed
     default:
       console.log(`Unknown command: ${command}`);

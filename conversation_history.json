@@ -5,6 +5,10 @@
   },
   {
     "role": "user",
-    "content": " hello "
+    "content": " I'm not Ultimate Lady  old lady "
+  },
+  {
+    "role": "user",
+    "content": "stop "
   }
 ]
