@@ -1,26 +1,3 @@
 [
-  {
-    "role": "user",
-    "content": "a random City in Iran "
-  },
-  {
-    "role": "user",
-    "content": "what "
-  },
-  {
-    "role": "user",
-    "content": " what what that City "
-  },
-  {
-    "role": "user",
-    "content": "give me another 1 "
-  },
-  {
-    "role": "user",
-    "content": "give me another 1 "
-  },
-  {
-    "role": "user",
-    "content": "what was last City you mentioned "
-  }
+
 ]
